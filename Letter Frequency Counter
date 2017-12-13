@@ -1,0 +1,7 @@
+puts "Enter a text of Roman letters and see how many times each letter is used."
+text = gets.to_str
+text.downcase!
+freqs = {}
+freqs.default = 0
+text.each_char { |char| freqs[char] += 1}
+("a".."z").each {|x| puts "#{x} : #{freqs[x]}" }
